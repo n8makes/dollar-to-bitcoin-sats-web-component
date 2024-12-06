@@ -77,10 +77,6 @@ class DollarToSatsWebComponent extends HTMLElement {
 
     const style = `
       <style>
-        :root {
-          overflow: hidden;
-        }
-        
         .card {
           font-size: 62.5%;
           background-color: ${backgroudColor};
