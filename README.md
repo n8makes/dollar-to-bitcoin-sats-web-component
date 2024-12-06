@@ -1,8 +1,8 @@
 # Dollar to Bitcoin SATS convertor - Web Component
 
-This is a stand alone web component that can be dropped into any website.
+This is a stand-alone web component that can be dropped into any website.
 
-The component fetches the latest price of Bitcoin from Coindesk and displays the current amount of SATS you can buy for one US dollar. One Bitcoin equals one hundred millions SATS.
+The component fetches the latest price of Bitcoin from Coindesk and displays the current amount of SATS you can buy for one US dollar. One Bitcoin equals one hundred million SATS.
 
 The component has minimal styling and will inherit some existing styles from your website.
 
