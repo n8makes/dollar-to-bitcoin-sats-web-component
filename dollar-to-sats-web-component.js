@@ -36,13 +36,23 @@ class DollarToSatsWebComponent extends HTMLElement {
       this.error = null;
       this.render();
 
-      const response = await fetch('https://api.coindesk.com/v1/bpi/currentprice.json');
+      const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
 
       if (!response.ok) {
         throw new Error('Failed to fetch Bitcoin price');
       }
 
-      this.data = await response.json();
+      const coinGeckoData = await response.json();
+      this.data = {
+        time: {
+          updated: new Date().toISOString()
+        },
+        bpi: {
+          USD: {
+            rate_float: coinGeckoData.bitcoin.usd
+          }
+        }
+      };
       this.loading = false;
     } catch (err) {
       this.error = err.message;
